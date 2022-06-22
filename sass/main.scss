@@ -7,7 +7,7 @@ $dark: #7978789f;
 @import "../node_modules/bootstrap/scss/variables";
 
 $custom-colors: (
-    "blackText": #000000,
+    "black": #000000,
 );
 
 $custom-spacer: (
@@ -16,7 +16,6 @@ $custom-spacer: (
 
 // theme colors
 $theme-colors: map-merge($theme-colors, $custom-colors);
-$colors: map-merge($custom-colors, $colors);
 //spacing
 $spacers: map-merge($custom-spacer, $spacers);
 
