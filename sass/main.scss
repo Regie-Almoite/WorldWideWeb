@@ -1,0 +1,78 @@
+$primary: #00ffc6;
+$secondary: #adadad9f;
+$light: #ffffff;
+$dark: #7978789f;
+
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+
+$custom-colors: (
+    "blackText": #000000,
+);
+
+$custom-spacer: (
+    6: 4rem,
+);
+
+// theme colors
+$theme-colors: map-merge($theme-colors, $custom-colors);
+$colors: map-merge($custom-colors, $colors);
+//spacing
+$spacers: map-merge($custom-spacer, $spacers);
+
+//Importing bootstrap scss
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+
+//custom css
+
+#web {
+    background-image: url(../images/server.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 0;
+
+    div {
+        z-index: 1;
+    }
+}
+
+#web::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    backdrop-filter: blur(5px) brightness(0.5);
+}
+
+.indent {
+    text-indent: 4rem;
+}
+
+dl {
+    div {
+        border-radius: 1rem;
+        min-height: 300px;
+        border: 3px solid grey;
+        padding: 1rem;
+    }
+    dt {
+        margin-bottom: 1rem;
+    }
+}
+
+ul {
+    list-style-position: inside;
+}
+
+#goBackBtn {
+    border: solid #adadad9f;
+}
+
+#goBackBtn:hover {
+    background-color: #00ffc6;
+    border: solid black;
+}
